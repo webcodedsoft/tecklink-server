@@ -5,11 +5,11 @@ const cors = require('cors');
 require('dotenv').config({ path: __dirname + '/.env' })
 
 const app = express();
-mongoose.connect(process.env.mongoUrlDev, {
+mongoose.connect(process.env.mongoUrlPro, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-mongoose.connection.on('connected', () => { console.log("Connected")})
+mongoose.connection.on('connected', () => { })
 
 //Middlewares
 app.use(express.json());
